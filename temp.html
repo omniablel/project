@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./img/favicon.png" rel="shortcut icon"/>
+        <meta charset="utf-8"/>
+        <meta content="width=1440, maximum-scale=1.0" name="viewport"/>
+        <style>
+            @font-face {
+                font-family
+                :
+                 
+                "CursedTimerULiL"
+                ;
+                
+                                          
+                src
+                :
+                 
+                url("../fonts/CursedTimerUlil-Aznm.ttf")
+                 
+                format("truetype")
+                ;
+            }
+            /* .anima-animate-appear prefix for appear animations */
+            .anima-animate-appear {
+                opacity             : 0;
+                display             : block;
+                animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
+            }
+            .anima-animate-disappear {
+                opacity             : 1;
+                display             : block;
+                animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+            }
+            .anima-animate-nodelay {
+                animation-delay     : 0s;
+            }
+            @keyframes anima-reveal {
+                from {
+                    opacity             : 0;
+                }
+                to {
+                    opacity             : 1;
+                }
+            }
+            * {
+                box-sizing          : border-box;
+            }
+            .anima-component-wrapper,
+            .anima-component-wrapper * {
+                pointer-events      : none;
+            }
+            .anima-component-wrapper a *,
+            .anima-component-wrapper a,
+            .anima-component-wrapper input,
+            .anima-component-wrapper video,
+            .anima-component-wrapper iframe,
+            .anima-listeners-active,
+            .anima-listeners-active * {
+                pointer-events      : auto;
+            }
+            .anima-hidden,
+            .anima-hidden * {
+                visibility          : hidden;
+                pointer-events      : none;
+            }
+            .anima-smart-layers-pointers,
+            .anima-smart-layers-pointers * {
+                pointer-events      : auto;
+                visibility          : visible;
+            }
+            .anima-component-wrapper.anima-not-ready,
+            .anima-component-wrapper.anima-not-ready * {
+                visibility          : hidden !important;
+            }
+            .anima-listeners-active-click,
+            .anima-listeners-active-click * {
+                cursor              : pointer;
+            }
+            .anima-component-wrapper a,
+            .anima-screen a {
+                text-decoration     : none;
+            }
+            .anima-flexbox-container a {
+                line-height         : 0;
+            }
+            .anima-full-width-a {
+                width               : 100%;
+            }
+            .anima-full-height-a {
+                height              : 100%;
+            }
+            .anima-screen textarea:focus,
+            .anima-screen input:focus {
+                outline             : none;
+            }
+            .anima-screen div {
+                -webkit-text-size-adjust: none;
+            }
+            .anima-container-center-vertical,
+            .anima-container-center-horizontal {
+                pointer-events      : none;
+                display             : flex;
+                flex-direction      : row;
+                padding             : 0;
+                margin              : 0;
+            }
+            .anima-container-center-vertical {
+                align-items         : center;
+                height              : 100%;
+            }
+            .anima-container-center-horizontal {
+                justify-content     : center;
+                width               : 100%;
+            }
+            .anima-container-center-vertical > *,
+            .anima-container-center-horizontal > * {
+                pointer-events      : auto;
+                flex-shrink         : 0;
+            }
+            .anima-component-wrapper ,
+            .anima-screen {
+                overflow-wrap       : break-word;
+                word-wrap           : break-word;
+                word-break          : break-all;
+                word-break          : break-word;
+            }
+            .anima-auto-animated div {
+                opacity             : 0;
+                position            : absolute;
+                --anima-z-index: -1;
+            }
+            /* ANIMA screen - main */
+            .font-class-1 {
+                color               : var(--auto-palette-color-1);
+                font-family         : "CursedTimerULiL", Helvetica, Arial, serif;
+                font-size           : 100.0px;
+                letter-spacing      : 1.00px;
+                line-height         : 108.0px;
+            }
+            .font-class-2 {
+                color               : var(--auto-palette-color-1);
+                font-family         : "CursedTimerULiL", Helvetica, Arial, serif;
+                font-size           : 50.0px;
+                letter-spacing      : 0.50px;
+                line-height         : 53.0px;
+            }
+            :root {
+                --auto-palette-color-1: rgba(255,255,255,1.0);
+            }
+            .main {
+                background-color    : rgba(31,45,61,1.0);
+                height              : 1024.0px;
+                overflow            : hidden;
+                position            : relative;
+                width               : 1440.0px;
+            }
+            .main .group-37-9VSbyX {
+                background-color    : rgba(255,255,255,0);
+                background-image    : url("./desktop-hd-rectangle-2.png");
+                background-size     : 100% 100%;
+                height              : 64px;
+                left                : 196px;
+                position            : absolute;
+                top                 : 770px;
+                transform           : rotate(0deg);
+                width               : 666px;
+            }
+            .main .days-3Q463w {
+                align-self          : flex-end;
+                background-color    : rgba(255,255,255,0);
+                flex-shrink         : 0;
+                height              : auto;
+                margin-bottom       : -3px;
+                margin-right        : -2.5px;
+                margin-top          : 2px;
+                min-height          : 50px;
+                min-width           : 140px;
+                position            : relative;
+                text-align          : left;
+                transform           : rotate(0deg);
+                width               : auto;
+            }
+            .main .rectangle-cp1WS5 {
+                background-color    : rgba(255,255,255,0);
+                border-color        : var(--auto-palette-color-1);
+                border-style        : solid;
+                border-width        : 5.0px;
+                height              : 250px;
+                left                : 0px;
+                position            : absolute;
+                top                 : 0px;
+                transform           : rotate(0deg);
+                width               : 1152px;
+            }
+            .main .group-xWfRCW {
+                background-color    : rgba(255,255,255,0);
+                height              : 137px;
+                left                : 338px;
+                position            : absolute;
+                top                 : 232px;
+                transform           : rotate(0deg);
+                width               : 764px;
+            }
+            .main .nutes-1atyh9 {
+                background-color    : rgba(255,255,255,0);
+                height              : auto;
+                left                : 45px;
+                position            : absolute;
+                text-align          : center;
+                top                 : -1px;
+                transform           : rotate(0deg);
+                width               : auto;
+            }
+            .main .a03-4XYRs7 {
+                background-color    : rgba(255,255,255,0);
+                height              : auto;
+                left                : -1px;
+                position            : absolute;
+                text-align          : center;
+                top                 : -1px;
+                transform           : rotate(0deg);
+                width               : auto;
+            }
+            .main .group-37-g6Os1P {
+                align-items         : flex-start;
+                background-color    : rgba(255,255,255,0);
+                background-image    : url("./desktop-hd-rectangle-1@2x.png");
+                background-size     : 100% 100%;
+                box-sizing          : border-box;
+                display             : inline-flex;
+                flex-direction      : row;
+                height              : 64px;
+                justify-content     : flex-end;
+                left                : 871px;
+                min-width           : 311px;
+                padding             : 20.0px 95.8px;
+                position            : absolute;
+                top                 : 770px;
+                transform           : rotate(0deg);
+                width               : auto;
+            }
+            .main .get-notify-bcmIdR {
+                background-color    : rgba(255,255,255,0);
+                color               : var(--auto-palette-color-1);
+                flex-shrink         : 0;
+                font-family         : "Futura-Bold", Helvetica, Arial, serif;
+                font-size           : 20.0px;
+                height              : auto;
+                letter-spacing      : 0.20px;
+                line-height         : 18.0px;
+                min-height          : 20px;
+                min-width           : 127px;
+                position            : relative;
+                text-align          : left;
+                transform           : rotate(0deg);
+                width               : auto;
+            }
+            .main .-Cx4dRz {
+                background-color    : rgba(255,255,255,0);
+                height              : auto;
+                left                : 206px;
+                position            : absolute;
+                text-align          : center;
+                top                 : 49px;
+                transform           : rotate(0deg);
+                width               : 32px;
+            }
+            .main .group-4-0Nz5JB {
+                align-items         : flex-start;
+                background-color    : rgba(255,255,255,0);
+                box-sizing          : border-box;
+                display             : flex;
+                flex-direction      : column;
+                height              : auto;
+                justify-content     : flex-start;
+                left                : 882px;
+                min-height          : 151px;
+                position            : absolute;
+                top                 : 50px;
+                transform           : rotate(0deg);
+                width               : 233px;
+            }
+            .main .seconds-oiNebY {
+                align-self          : flex-end;
+                background-color    : rgba(255,255,255,0);
+                flex-shrink         : 0;
+                height              : auto;
+                margin-bottom       : -3px;
+                margin-right        : -1.5px;
+                margin-top          : 2px;
+                min-height          : 50px;
+                min-width           : 236px;
+                position            : relative;
+                text-align          : center;
+                transform           : rotate(0deg);
+                width               : auto;
+            }
+            .main .a38-HAwv6Q {
+                background-color    : rgba(255,255,255,0);
+                flex-shrink         : 0;
+                height              : auto;
+                margin-bottom       : -8px;
+                margin-left         : -1.0px;
+                margin-top          : -1px;
+                min-height          : 100px;
+                min-width           : 140px;
+                position            : relative;
+                text-align          : center;
+                transform           : rotate(0deg);
+                width               : auto;
+            }
+            .main .-98xcup {
+                background-color    : rgba(255,255,255,0);
+                height              : auto;
+                left                : 807px;
+                position            : absolute;
+                text-align          : left;
+                top                 : 50px;
+                transform           : rotate(0deg);
+                width               : 32px;
+            }
+            .main .hours-HAO8vg {
+                align-self          : flex-end;
+                background-color    : rgba(255,255,255,0);
+                flex-shrink         : 0;
+                height              : auto;
+                margin-bottom       : -3px;
+                margin-right        : -1.5px;
+                margin-top          : 3px;
+                min-height          : 50px;
+                min-width           : 172px;
+                position            : relative;
+                text-align          : center;
+                transform           : rotate(0deg);
+                width               : auto;
+            }
+            .main .a16-bFpHxg {
+                background-color    : rgba(255,255,255,0);
+                flex-shrink         : 0;
+                height              : auto;
+                margin-bottom       : -8px;
+                margin-top          : -1px;
+                min-height          : 100px;
+                position            : relative;
+                text-align          : left;
+                transform           : rotate(0deg);
+                width               : 129px;
+            }
+            .main .group-6-Pj6qet {
+                align-items         : flex-start;
+                background-color    : rgba(255,255,255,0);
+                box-sizing          : border-box;
+                display             : flex;
+                flex-direction      : column;
+                height              : auto;
+                justify-content     : flex-start;
+                left                : 242px;
+                min-height          : 152px;
+                position            : absolute;
+                top                 : 49px;
+                transform           : rotate(0deg);
+                width               : 202px;
+            }
+            .main .-cgPare {
+                background-color    : rgba(255,255,255,0);
+                height              : auto;
+                left                : 474px;
+                position            : absolute;
+                text-align          : center;
+                top                 : 51px;
+                transform           : rotate(0deg);
+                width               : 32px;
+            }
+            .main .rectangle-pwJWlx {
+                background-color    : rgba(255,255,255,0);
+                height              : 1118px;
+                left                : -111px;
+                opacity             : 0.47;
+                position            : absolute;
+                top                 : -26px;
+                transform           : rotate(0deg);
+                width               : 1653px;
+            }
+            .main .a6-f2-a1732-1zye2j {
+                background-color    : rgba(255,255,255,0);
+                height              : 1118px;
+                left                : -386px;
+                position            : absolute;
+                top                 : -25px;
+                transform           : rotate(0deg);
+                width               : 1880px;
+            }
+            .main .group-5-JItUvF {
+                background-color    : rgba(255,255,255,0);
+                height              : 146px;
+                left                : 550px;
+                position            : absolute;
+                top                 : 51px;
+                transform           : rotate(0deg);
+                width               : 208px;
+            }
+            .main .mi-rYpcw5 {
+                background-color    : rgba(255,255,255,0);
+                height              : auto;
+                left                : -1px;
+                position            : absolute;
+                text-align          : center;
+                top                 : -1px;
+                transform           : rotate(0deg);
+                width               : auto;
+            }
+            .main .group-3-RoDtSl {
+                background-color    : rgba(255,255,255,0);
+                height              : 49px;
+                left                : 3px;
+                position            : absolute;
+                top                 : 97px;
+                transform           : rotate(0deg);
+                width               : 205px;
+            }
+            .main .group-8-7PUjUR {
+                background-color    : rgba(255,255,255,0);
+                height              : 250px;
+                left                : 144px;
+                position            : absolute;
+                top                 : 452px;
+                transform           : rotate(0deg);
+                width               : 1152px;
+            }
+            .main .group-7-xpuYDR {
+                align-items         : flex-start;
+                background-color    : rgba(255,255,255,0);
+                box-sizing          : border-box;
+                display             : flex;
+                flex-direction      : column;
+                height              : auto;
+                justify-content     : flex-start;
+                left                : 38px;
+                min-height          : 151px;
+                position            : absolute;
+                top                 : 51px;
+                transform           : rotate(0deg);
+                width               : 138px;
+            }
+            .main .a35-meux8U {
+                background-color    : rgba(255,255,255,0);
+                flex-shrink         : 0;
+                height              : auto;
+                margin-bottom       : -8px;
+                margin-left         : -1.0px;
+                margin-top          : -1px;
+                min-height          : 100px;
+                min-width           : 140px;
+                position            : relative;
+                text-align          : center;
+                transform           : rotate(0deg);
+                width               : auto;
+            }
+        </style>
+        <meta content="AnimaApp.com - Design to code, Automated." name="author">
+        </meta>
+    </head>
+    <body style="margin: 0;
+ background: rgba(31, 45, 61, 1.0);">
+        <input id="anPageName" name="page" type="hidden" value="main"/>
+        <div class="anima-container-center-horizontal">
+            <div class="main anima-screen ">
+                <img class="a6-f2-a1732-1zye2j" src="./desktop-hd-6f2a1732.png"/>
+                <img class="rectangle-pwJWlx" src="./desktop-hd-rectangle.png"/>
+                <div class="group-8-7PUjUR">
+                    <div class="group-5-JItUvF">
+                        <div class="group-3-RoDtSl">
+                            <div class="mi-rYpcw5 font-class-2">
+                                mi
+                            </div>
+                            <div class="nutes-1atyh9 font-class-2">
+                                nutes
+                            </div>
+                        </div>
+                        <div class="a03-4XYRs7 font-class-1">
+                            03
+                        </div>
+                    </div>
+                    <div class="-cgPare font-class-1">
+                        :
+                    </div>
+                    <div class="group-6-Pj6qet anima-flexbox-container">
+                        <div class="a16-bFpHxg font-class-1">
+                            16
+                        </div>
+                        <div class="hours-HAO8vg font-class-2">
+                            hours
+                        </div>
+                    </div>
+                    <div class="-Cx4dRz font-class-1">
+                        :
+                    </div>
+                    <div class="group-4-0Nz5JB anima-flexbox-container">
+                        <div class="a38-HAwv6Q font-class-1">
+                            38
+                        </div>
+                        <div class="seconds-oiNebY font-class-2">
+                            seconds
+                        </div>
+                    </div>
+                    <div class="-98xcup font-class-1">
+                        :
+                    </div>
+                    <div class="group-7-xpuYDR anima-flexbox-container">
+                        <div class="a35-meux8U font-class-1">
+                            35
+                        </div>
+                        <div class="days-3Q463w font-class-2">
+                            days
+                        </div>
+                    </div>
+                    <div class="rectangle-cp1WS5">
+                    </div>
+                </div>
+                <img class="group-xWfRCW" src="./desktop-hd-group.png"/>
+                <div class="group-37-g6Os1P anima-flexbox-container">
+                    <div class="get-notify-bcmIdR">
+                        Get Notify
+                    </div>
+                </div>
+                <div class="group-37-9VSbyX">
+                </div>
+            </div>
+        </div>
+        <!-- Scripts -->
+        <!-- End of Scripts -->
+    </body>
+</html>
